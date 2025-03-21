@@ -1,9 +1,9 @@
 <template>
-  <a-row id="globalHeader" align="center" :wrap="false">
+  <a-row id="globalHeader" :wrap="false" align="center">
     <a-col flex="auto">
       <a-menu
-        mode="horizontal"
         :selected-keys="selectedKeys"
+        mode="horizontal"
         @menu-item-click="doMenuClick"
       >
         <a-menu-item
@@ -28,7 +28,7 @@
   </a-row>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { routes } from "@/router/routes";
 import { useRouter } from "vue-router";
 import { computed, ref } from "vue";
